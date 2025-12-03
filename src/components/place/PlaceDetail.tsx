@@ -65,7 +65,6 @@ export function PlaceDetail({ place, showPhotos = true }: PlaceDetailProps) {
               <ImageWithFallback
                 src={photo}
                 alt={`${place.name} - фото ${index + 1}`}
-                fill
                 className="object-contain"
               />
             </div>
