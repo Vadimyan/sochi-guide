@@ -1,0 +1,45 @@
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
+
+interface ImageWithFallbackProps {
+  src: string;
+  alt: string;
+  className?: string;
+  sizes?: string;
+}
+
+export function ImageWithFallback({
+  src,
+  alt,
+  className = '',
+  sizes,
+}: ImageWithFallbackProps) {
+  const [error, setError] = useState(false);
+
+  if (error) {
+    // Fallback placeholder with gradient and icon
+    return (
+      <div
+        className={`relative w-full h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center ${className}`}
+      >
+        <div className="text-center px-4">
+          <div className="text-4xl mb-2">📸</div>
+          <p className="text-sm text-gray-600 font-medium line-clamp-2">{alt}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      className={className}
+      sizes={sizes}
+      onError={() => setError(true)}
+    />
+  );
+}

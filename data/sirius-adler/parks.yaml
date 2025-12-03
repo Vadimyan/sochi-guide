@@ -1,0 +1,22 @@
+section:
+  id: sirius-adler-parks
+  title: Прогулки и развлечения
+  description: Парки и интересные места для прогулок в Сириусе и Адлере
+
+places:
+  - id: yuzhnie-kultury
+    name: Парк "Южные культуры"
+    longDescription: |
+      Очень красивый парк, местами интереснее сочинского дендрария, тихий и приятный. Небольшой, но для дневной прогулки между завтраком и обедом хорош.
+    photos:
+      - /images/sirius-adler/yuzhnie-kultury-1.jpg
+    yandexMapsUrl: https://yandex.ru/maps/-/CHr56Iix
+    featured: true
+
+  - id: ornitologicheskiy-park
+    name: Орнитологический парк в Сириусе
+    longDescription: |
+      Смотреть на птиц и сидеть у пруда. Кормить гусей с руки. Птиц тут много и они буквально лежат под каждым кустом.
+    photos:
+      - /images/sirius-adler/ornitologicheskiy-1.jpg
+    yandexMapsUrl: https://yandex.ru/maps/-/CHr5jRLz
