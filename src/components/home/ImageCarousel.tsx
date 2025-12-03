@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { getImagePath } from '@/lib/basePath';
 
 interface ImageCarouselProps {
   images: string[];
@@ -34,7 +35,7 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
           }`}
         >
           <Image
-            src={image}
+            src={getImagePath(image)}
             alt="Место в Сочи и Красной Поляне"
             fill
             className="object-cover"

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { loadPage, getAllPageSlugs } from '@/lib/data';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { PlaceSection } from '@/components/region/PlaceSection';
+import { getImagePath } from '@/lib/basePath';
 
 interface RegionPageProps {
   params: {
@@ -58,7 +59,7 @@ export default function RegionPage({ params }: RegionPageProps) {
                         }`}
                       >
                         <Image
-                          src={mapImage}
+                          src={getImagePath(mapImage)}
                           alt={`Карта ${page.title} - ${index + 1}`}
                           fill
                           className="object-contain rounded-lg"

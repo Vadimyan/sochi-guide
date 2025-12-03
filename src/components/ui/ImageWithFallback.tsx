@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { getImagePath } from '@/lib/basePath';
 
 interface ImageWithFallbackProps {
   src: string;
@@ -17,6 +18,7 @@ export function ImageWithFallback({
   sizes,
 }: ImageWithFallbackProps) {
   const [error, setError] = useState(false);
+  const imagePath = getImagePath(src);
 
   if (error) {
     // Fallback placeholder with gradient and icon
@@ -34,7 +36,7 @@ export function ImageWithFallback({
 
   return (
     <Image
-      src={src}
+      src={imagePath}
       alt={alt}
       fill
       className={className}
