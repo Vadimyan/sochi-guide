@@ -44,15 +44,15 @@ export default function RegionPage({ params }: RegionPageProps) {
                 {/* Map Images */}
                 {page.mapImages && page.mapImages.length > 0 && (
                   <div className={`mt-6 ${
-                    page.mapImages.length === 1
+                    page.mapImages!.length === 1
                       ? 'flex justify-center'
                       : 'grid grid-cols-1 md:grid-cols-2 gap-4'
                   }`}>
-                    {page.mapImages.map((mapImage, index) => (
+                    {page.mapImages!.map((mapImage, index) => (
                       <div
                         key={index}
                         className={`relative ${
-                          page.mapImages.length === 1
+                          page.mapImages!.length === 1
                             ? 'w-full max-w-2xl h-80 md:h-96'
                             : 'w-full h-64 md:h-80'
                         }`}
