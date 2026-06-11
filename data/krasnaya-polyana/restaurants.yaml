@@ -28,16 +28,6 @@ places:
     yandexMapsUrl: https://yandex.ru/maps/-/CHbWn26M
     featured: true
 
-  - id: gaia
-    name: Gaia
-    longDescription: |
-      Хорошая терасса для ужина. Заведение от Mom's, поэтому почти так же вкусно.
-
-      Заведение от Mom's бистро — поэтому тоже хорошие завтраки, хорошее основное меню. Можно сходить, если совсем наскучит сам. Mom's (они рядом друг с другом) или ради разнообразия, но лучше всё-таки в сам Mom's.
-    photos:
-      - /images/krasnaya-polyana/gaia-1.jpg
-    yandexMapsUrl: https://yandex.ru/maps/-/CHbWrRot
-
   - id: mechanica-coffee
     name: Mechanica Coffee
     longDescription: |
@@ -140,3 +130,13 @@ places:
     photos:
       - /images/krasnaya-polyana/moms-1.jpg
     yandexMapsUrl: https://yandex.ru/maps/org/mom_s_kofe_bistro/50604209990/
+
+  - id: gaia
+    name: Gaia
+    longDescription: |
+      Хорошая терасса для ужина. Заведение от Mom's, поэтому почти так же вкусно.
+
+      Заведение от Mom's бистро — поэтому тоже хорошие завтраки, хорошее основное меню. Можно сходить, если совсем наскучит сам. Mom's (они рядом друг с другом) или ради разнообразия, но лучше всё-таки в сам Mom's.
+    photos:
+      - /images/krasnaya-polyana/gaia-1.jpg
+    yandexMapsUrl: https://yandex.ru/maps/-/CHbWrRot
