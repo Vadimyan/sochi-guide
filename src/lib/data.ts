@@ -140,20 +140,3 @@ export function getAllPages(): Page[] {
   const slugs = getAllPageSlugs();
   return slugs.map(slug => loadPage(slug));
 }
-
-/**
- * Get featured places from all regions
- */
-export function getFeaturedPlaces(): Place[] {
-  const slugs = getAllPageSlugs();
-  const allPlaces: Place[] = [];
-
-  for (const slug of slugs) {
-    const page = loadPage(slug);
-    for (const section of page.sections) {
-      allPlaces.push(...section.places.filter(p => p.featured));
-    }
-  }
-
-  return allPlaces;
-}
