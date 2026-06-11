@@ -4,6 +4,15 @@ section:
   description: Бани, бассейны и места для восстановления после активного отдыха
 
 places:
+  - id: kalinovaya-banya
+    name: Калиновая баня
+    longDescription: |
+      Всё, везде и сразу — отличная парилка, замечательные мастера, красивый вид, приятный бассейн, вкусный чай, сушки просто огнище. Камин, купель. Чисто. Красиво. Приятно. Чтобы расслабиться и перезагрузиться топ-1 место лично для нас.
+    photos:
+      - /images/krasnaya-polyana/kalinovaya-banya-1.jpg
+    yandexMapsUrl: https://yandex.ru/maps/-/CPtIMY7Y
+    featured: true
+
   - id: banya-4-stihii
     name: Баня 4 стихии
     longDescription: |
