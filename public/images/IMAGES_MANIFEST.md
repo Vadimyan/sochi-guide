@@ -40,7 +40,6 @@ This document lists all images referenced in the YAML data files. All images sho
 - `/images/krasnaya-polyana/krugozor-1.jpg`
 - `/images/krasnaya-polyana/kupel-1.jpg`
 - `/images/krasnaya-polyana/old-boys-1.jpg`
-- `/images/krasnaya-polyana/old-boys-2.jpg`
 - `/images/krasnaya-polyana/ozerniy-1.jpg`
 - `/images/krasnaya-polyana/ozerniy-2.jpg`
 - `/images/krasnaya-polyana/ozerniy-3.jpg`
