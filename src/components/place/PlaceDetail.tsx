@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Place } from '@/lib/types';
 import { ImageWithFallback } from '../ui/ImageWithFallback';
+import { TrackedLink } from '../analytics/TrackedLink';
 
 interface PlaceDetailProps {
   place: Place;
@@ -22,7 +23,9 @@ export function PlaceDetail({ place, showPhotos = true }: PlaceDetailProps) {
       {/* Place Header */}
       <div className="mb-4">
         {firstUrl ? (
-          <a
+          <TrackedLink
+            goal="open-place-map"
+            label={place.id}
             href={firstUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -33,7 +36,7 @@ export function PlaceDetail({ place, showPhotos = true }: PlaceDetailProps) {
               {place.featured && <span className="text-yellow-500">⭐</span>}
               <span className="text-lg opacity-50">↗</span>
             </h3>
-          </a>
+          </TrackedLink>
         ) : (
           <h3 className="text-2xl font-bold text-gray-900 mb-2 inline-flex items-center gap-2">
             {place.name}
@@ -76,7 +79,9 @@ export function PlaceDetail({ place, showPhotos = true }: PlaceDetailProps) {
       {yandexMapsUrls.length > 0 && (
         <div className="mt-4 space-y-2">
           {yandexMapsUrls.length === 1 ? (
-            <a
+            <TrackedLink
+              goal="open-place-map"
+              label={place.id}
               href={yandexMapsUrls[0]}
               target="_blank"
               rel="noopener noreferrer"
@@ -84,12 +89,14 @@ export function PlaceDetail({ place, showPhotos = true }: PlaceDetailProps) {
             >
               <span>📍</span>
               <span>Открыть на Яндекс.Картах</span>
-            </a>
+            </TrackedLink>
           ) : (
             <>
               <p className="text-gray-600 font-medium">Адреса на Яндекс.Картах:</p>
               {yandexMapsUrls.map((url, index) => (
-                <a
+                <TrackedLink
+                  goal="open-place-map"
+                  label={place.id}
                   key={index}
                   href={url}
                   target="_blank"
@@ -98,7 +105,7 @@ export function PlaceDetail({ place, showPhotos = true }: PlaceDetailProps) {
                 >
                   <span>📍</span>
                   <span>Адрес {index + 1}</span>
-                </a>
+                </TrackedLink>
               ))}
             </>
           )}

@@ -4,6 +4,7 @@ import { loadPage, getAllPageSlugs } from '@/lib/data';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { PlaceSection } from '@/components/region/PlaceSection';
 import { getImagePath } from '@/lib/basePath';
+import { TrackedLink } from '@/components/analytics/TrackedLink';
 
 interface RegionPageProps {
   params: {
@@ -86,7 +87,9 @@ export default function RegionPage({ params }: RegionPageProps) {
             {/* Yandex Maps Collection Link */}
             {page.yandexMapsCollectionUrl && (
               <div className="mb-8">
-                <a
+                <TrackedLink
+                  goal="open-maps-collection"
+                  label={page.slug}
                   href={page.yandexMapsCollectionUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -94,7 +97,7 @@ export default function RegionPage({ params }: RegionPageProps) {
                 >
                   <span>🗺️</span>
                   <span>Все места на Яндекс.Картах одним списком</span>
-                </a>
+                </TrackedLink>
               </div>
             )}
           </header>
